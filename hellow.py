@@ -1,2 +1,3 @@
-import streamlit as st
-st.title(input("done"))
+import tkinter
+import tkinter as tk
+window = tk.Tk()
