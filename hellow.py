@@ -1,2 +1,2 @@
 import streamlit as st
-st.title("Crypto Tracker")
+st.title(input("done"))
