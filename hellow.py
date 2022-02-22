@@ -1,1 +1,2 @@
-ok=input("ready?")
+import streamlit as 
+st.title("Crypto Tracker")
