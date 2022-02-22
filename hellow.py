@@ -1,2 +1,2 @@
-import streamlit as 
+import streamlit as st
 st.title("Crypto Tracker")
