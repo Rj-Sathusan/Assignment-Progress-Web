@@ -2,8 +2,18 @@
 import streamlit as st
 from datetime import datetime
 import mysql.connector
+mydb  = mysql.connector.connect(
+  host="sql6.freemysqlhosting.net", user="sql6474318",
+  password="Q3Bq46Z4Vd", database="sql6474318")
+  
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Try")
+
+Result = mycursor.fetchall()
 
 st.title("Hello GeeksForGeeks !!!")
 
 
-st.write("Result")
+st.write(Result)
