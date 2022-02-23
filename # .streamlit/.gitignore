@@ -1,8 +1,7 @@
 # .streamlit/secrets.toml
 
 [mysql]
-host = "localhost"
-port = 3306
-database = "xxx"
-user = "xxx"
-password = "xxx"
+host = "sql6.freemysqlhosting.net"
+database = "sql6474318"
+user = "sql6474318"
+password = "Q3Bq46Z4Vd"
