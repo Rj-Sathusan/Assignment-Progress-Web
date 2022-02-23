@@ -1,25 +1,48 @@
-# import module
-import streamlit as st
-from datetime import datetime
+# Python program to create a table
+
+from tkinter import *
+
+
+class Table:
+	
+	def __init__(self,root):
+		
+		# code for creating table
+		for i in range(total_rows):
+			for j in range(total_columns):
+				
+				self.e = Entry(root, width=15, fg='black',
+							font=('Arial',12))
+				
+				self.e.grid(row=i, column=j)
+				self.e.insert(END, lst[i][j])
+
+
+
+# import required modules
 import mysql.connector
-# Initialize connection.
-# Uses st.cache to only run once.
-@st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
-def init_connection():
-    return mysql.connector.connect(**st.secrets["mysql"])
+  
+# create connection object
+mydb  = mysql.connector.connect(
+  host="sql6.freemysqlhosting.net", user="sql6474318",
+  password="Q3Bq46Z4Vd", database="sql6474318")
+  
 
-conn = init_connection()
+mycursor = mydb.cursor()
 
-# Perform query.
-# Uses st.cache to only rerun when the query changes or after 10 min.
-@st.cache(ttl=600)
-def run_query(query):
-    with conn.cursor() as cur:
-        cur.execute(query)
-        return cur.fetchall()
+mycursor.execute("SELECT * FROM Try")
 
-rows = run_query("SELECT * from Try")
+Result = mycursor.fetchall()
 
-# Print results.
-for row in rows:
-    st.write(f"{row[0]} has a :{row[1]}:")
+head=[("ID","NAME")]
+lst = head+Result
+
+# find total number of rows and
+# columns in list
+total_rows = len(lst)
+total_columns = len(lst[2])
+
+# create root window
+root = Tk()
+t = Table(root)
+root.mainloop()
