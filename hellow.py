@@ -2,18 +2,24 @@
 import streamlit as st
 from datetime import datetime
 import mysql.connector
-mydb  = mysql.connector.connect(
-  host="sql6.freemysqlhosting.net", user="sql6474318",
-  password="Q3Bq46Z4Vd", database="sql6474318")
-  
+# Initialize connection.
+# Uses st.cache to only run once.
+@st.cache(allow_output_mutation=True, hash_funcs={"_thread.RLock": lambda _: None})
+def init_connection():
+    return mysql.connector.connect(**st.secrets["mysql"])
 
-mycursor = mydb.cursor()
+conn = init_connection()
 
-mycursor.execute("SELECT * FROM Try")
+# Perform query.
+# Uses st.cache to only rerun when the query changes or after 10 min.
+@st.cache(ttl=600)
+def run_query(query):
+    with conn.cursor() as cur:
+        cur.execute(query)
+        return cur.fetchall()
 
-Result = mycursor.fetchall()
+rows = run_query("SELECT * from Try;")
 
-st.title("Hello GeeksForGeeks !!!")
-
-
-st.write(Result)
+# Print results.
+for row in rows:
+    st.write(f"{row[0]} has a :{row[1]}:")
