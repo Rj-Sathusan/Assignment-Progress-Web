@@ -4,8 +4,8 @@ import mysql.connector
   
 # create connection object
 mydb  = mysql.connector.connect(
-  host=st.secrets[db_host], user="sql6474318",
-  password="Q3Bq46Z4Vd", database="sql6474318")
+  host=(st.secrets[db_host]), user=(st.secrets[db_username]),
+  password=(st.secrets[db_password]), database=(st.secrets[db_username]))
   
 
 mycursor = mydb.cursor()
