@@ -1,8 +1,7 @@
 import streamlit as st
 # import required modules
 import mysql.connector
-ok=st.secrets["db_username"]
-# create connection object
+
 
 # create connection object
 mydb  = mysql.connector.connect(
