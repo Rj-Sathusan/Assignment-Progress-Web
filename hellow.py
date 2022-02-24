@@ -5,8 +5,8 @@ import mysql.connector
 
 # create connection object
 mydb  = mysql.connector.connect(
-  host="sql6.freemysqlhosting.net", user="sql6474318",
-  password="Q3Bq46Z4Vd", database=st.secrets["db"])
+  host=st.secrets["db_host"], user=st.secrets["db_user"],
+  password=st.secrets["db_pass"], database=st.secrets["db"])
   
 
 mycursor = mydb.cursor()
