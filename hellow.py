@@ -13,7 +13,4 @@ mycursor = mydb.cursor()
 mycursor.execute("SELECT * FROM Try")
 
 Result = mycursor.fetchall()
-
-head=[("ID","NAME")]
-lst = head+Result
-st.write(list)
+st.write(Result)
