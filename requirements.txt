@@ -1,2 +1,1 @@
 mysql-connector-python==8.0.28
-tk-tools==0.14.0
