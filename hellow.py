@@ -4,7 +4,7 @@ import mysql.connector
   
 # create connection object
 mydb  = mysql.connector.connect(
-  host=(st.secrets[db_host]), user="sql6474318",
+  host=st.secrets[db_host], user="sql6474318",
   password="Q3Bq46Z4Vd", database="sql6474318")
   
 
