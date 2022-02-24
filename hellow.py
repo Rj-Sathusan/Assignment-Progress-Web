@@ -15,3 +15,4 @@ mycursor.execute("SELECT * FROM Try")
 
 Result = mycursor.fetchall()
 
+st.write(Result)
