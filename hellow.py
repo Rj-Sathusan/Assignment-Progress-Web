@@ -9,13 +9,13 @@ mydb  = mysql.connector.connect(
   password=st.secrets["db_pass"], database=st.secrets["db"])
   
 
-name = st.text_input("Enter Your Student ID") 
+name = st.text_input("Enter Your Student ID","") 
 if(st.button('Submit')):
   sql = "SELECT * FROM assignment_details WHERE Student_code="+name
+  mycursor = mydb.cursor()
+  mycursor.execute(sql)
+  Result = mycursor.fetchall()
 
-mycursor = mydb.cursor()
-mycursor.execute(sql)
-Result = mycursor.fetchall()
 
 st.write('Student ID : ',Result[0][0])
 st.write(' Name : ',Result[0][1])
@@ -24,6 +24,8 @@ st.write('Completed Assignments : ',Result[0][3])
 
 if Result[0][3]>14:
         st.write("Statue : Completed")
+elif Result[0][3]<14:
+        st.write("Statue : ",(15-Result[0][3]),"more assignments pending...")
 elif Result[0][3]<14:
         st.write("Statue : ",(15-Result[0][3]),"more assignments pending...")
 
