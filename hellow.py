@@ -9,17 +9,12 @@ mydb  = mysql.connector.connect(
   password=st.secrets["db_pass"], database=st.secrets["db"])
   
 
-mycursor = mydb.cursor()
-
-name = st.text_input("Enter Your Student ID")
- 
+name = st.text_input("Enter Your Student ID") 
 if(st.button('Submit')):
   sql = "SELECT * FROM assignment_details WHERE Student_code="+name
 
-
+mycursor = mydb.cursor()
 mycursor.execute(sql)
-#mycursor.execute("SELECT * FROM assignment_details")
-
 Result = mycursor.fetchall()
 
 st.write('Student ID : ',Result[0][0])
