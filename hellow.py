@@ -19,7 +19,7 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   
   st.write('')
-  col1, col2, col3 = st.columns.([1,6,1])
+  col1, col2, col3 = st.columns([1,6,1])
 
   with col1:
       st.write('ppppp')
