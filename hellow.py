@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import mysql.connector
+
 st.markdown("<u><h1 style='text-align: center; color: red;'>Assignment Progress System</h1><u><h4 style='text-align: center; color: white;'>IDM EASTERN CAMPUES</h4><u><br>", unsafe_allow_html=True)
 st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -15,8 +16,8 @@ if(st.button('Submit')):
   mycursor = mydb.cursor()
   mycursor.execute(sql)
   Result = mycursor.fetchall()
- 
   st.write('')
+  
   
   col1, col2 = st.columns([1,1])
   
@@ -25,13 +26,18 @@ if(st.button('Submit')):
         st.write('Name : ',Result[0][1])
         st.write('Starting Date : ',Result[0][2])
         st.write('Completed Assignments : ',Result[0][3])
+        if Result[0][3]>14:
+          st.write('Congratulations ',Result[0][1],' keep going !')
+        elif Result[0][3]<14:
+          st.write('Never give up ',Result[0][1],' keep going !')
+        
    
           
   if Result[0][3]>14:
         with col2:
                 st.write("Statue : Completed")
                 st.image("https://cdn.dribbble.com/users/43762/screenshots/1097917/dribbble_olympics_medal.gif")
-              
+                            
   elif Result[0][3]<14:
         with col2:
                 st.write("Statue : ",(15-Result[0][3])," more assignments pending...")
