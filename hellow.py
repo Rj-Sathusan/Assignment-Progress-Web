@@ -25,7 +25,7 @@ if(st.button('Submit')):
       st.write('ppppp')
 
   with col2:
-      st.image("https://i.imgflip.com/amucx.jpg")
+      st.write('ppppp')
 
   with col3:
       st.write("")
