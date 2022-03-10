@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import mysql.connector
+st.markdown("<h1 style='text-align: center; color: red;'>Some title</h1>", unsafe_allow_html=True)
 st.title("Assignment Progress System")
 img = Image.open("idm-campus.jpg")
 st.image(img, width=500)
@@ -18,8 +19,8 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   
   st.write('')
-  st.write('Student ID : ',Result[0][0])
-  st.write(' Name : ',Result[0][1])
+  st.write(' Student ID : ',Result[0][0])
+  st.write('Name : ',Result[0][1])
   st.write('Starting Date : ',Result[0][2])
   st.write('Completed Assignments : ',Result[0][3])
   
