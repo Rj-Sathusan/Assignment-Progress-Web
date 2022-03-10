@@ -19,7 +19,7 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   
   st.write('')
-  col1, col2, col3 = st.columns([1,10,1])
+  col1, col2, col3 = st.columns([0,6])
 
   with col1:
         st.write(' Student ID : ',Result[0][0])
@@ -33,7 +33,7 @@ if(st.button('Submit')):
                 st.image(img, width=500)
               
   elif Result[0][3]<14:
-        with col3:
+        with col2:
                 img = Image.open('pngtree-never-give-up-motivation-poster-concept-black-and-white-illustration-png-image_2154318-removebg-preview.png')
                 st.write("Statue : ",(15-Result[0][3])," more assignments pending...")
                 st.image(img, width=500)
