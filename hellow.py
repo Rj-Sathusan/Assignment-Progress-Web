@@ -17,10 +17,13 @@ mycursor.execute(sql)
 
 Result = mycursor.fetchall()
 
-st.write('Student ID : ',Result[0][0],'\br Name : ',Result[0][1],'\nStarting Date : ',Result[0][2],'\nCompleted Assignments : ',Result[0][3])
+st.write('Student ID : ',Result[0][0])
+st.write(' Name : ',Result[0][1])
+st.write('Starting Date : ',Result[0][2])
+st.write('Completed Assignments : ',Result[0][3])
 
 if Result[0][3]>14:
         st.write("Statue : Completed")
 elif Result[0][3]<14:
-        st.write("Statue : ",(15-Result[0][3]),"more pending...")
+        st.write("Statue : ",(15-Result[0][3]),"more assignments pending...")
 
