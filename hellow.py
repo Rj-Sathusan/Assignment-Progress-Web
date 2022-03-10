@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import mysql.connector
 st.title("Assignment Progress System")
-img = Image.open("Medal.gif")
+img = Image.open("idm-campus.jpg")
 st.image(img, width=200)
 
 mydb  = mysql.connector.connect(
