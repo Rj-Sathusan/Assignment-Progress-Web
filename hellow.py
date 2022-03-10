@@ -17,8 +17,9 @@ mycursor.execute(sql)
 
 Result = mycursor.fetchall()
 
-n=('Student ID : ',Result[0][0],'\nName : ',Result[0][1],'\nStarting Date : ',Result[0][2],'\nCompleted Assignments : ',Result[0][3])
-st.write(n)
+st.write("""
+  'Student ID : ',Result[0][0],'\nName : ',Result[0][1],'\nStarting Date : ',Result[0][2],'\nCompleted Assignments : ',Result[0][3]
+  """)
 
 if Result[0][3]>14:
         st.write("Statue : Completed")
