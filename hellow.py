@@ -11,7 +11,12 @@ mydb  = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-sql = "SELECT * FROM assignment_details WHERE Student_code=1003"
+name = st.text_input("Enter Your Student ID")
+ 
+if(st.button('Submit')):
+  sql = "SELECT * FROM assignment_details WHERE Student_code="+name
+
+
 mycursor.execute(sql)
 #mycursor.execute("SELECT * FROM assignment_details")
 
