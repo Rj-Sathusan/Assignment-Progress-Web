@@ -20,6 +20,8 @@ if(st.button('Submit')):
   
   st.write('')
   col1, col2 = st.columns([1,1])
+  
+st.markdown("<u><h4 style='text-align: center; color: green;'>Student Details</h4><u><br>", unsafe_allow_html=True)
 
   with col1:
         st.write(' Student ID : ',Result[0][0])
