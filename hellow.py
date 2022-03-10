@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import mysql.connector
-
+img = Image.open("https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png")
 
 
 mydb  = mysql.connector.connect(
