@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import mysql.connector
 st.markdown("<u><h1 style='text-align: center; color: red;'>Assignment Progress System</h1><u>", unsafe_allow_html=True)
-st.markdown("<u><h2 style='text-align: center; color: white;'>IDM EASTERN CAMPUES</h2><u><br>", unsafe_allow_html=True)
+st.markdown("<u><h3 style='text-align: center; color: white;'>IDM EASTERN CAMPUES</h3><u><br>", unsafe_allow_html=True)
 
 
 
