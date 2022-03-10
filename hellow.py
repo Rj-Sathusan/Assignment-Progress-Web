@@ -3,7 +3,7 @@ from PIL import Image
 import mysql.connector
 st.title("Assignment Progress System")
 img = Image.open("idm-campus.jpg")
-st.image(img, width=200)
+st.image(img, width=500)
 
 mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
@@ -25,6 +25,8 @@ if(st.button('Submit')):
   
   if Result[0][3]>14:
         st.write("Statue : Completed")
+        img = Image.open("500-5009955_open-circle-with-a-line-through.png")
+        st.image(img, width=500)
   elif Result[0][3]<14:
         st.write("Statue : ",(15-Result[0][3])," more assignments pending...")
 
