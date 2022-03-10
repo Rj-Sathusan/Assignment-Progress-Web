@@ -25,15 +25,15 @@ if(st.button('Submit')):
       st.write('ppppp')
 
   with col2:
-      st.write('ppppp')
+        st.write(' Student ID : ',Result[0][0])
+        st.write('Name : ',Result[0][1])
+        st.write('Starting Date : ',Result[0][2])
+        st.write('Completed Assignments : ',Result[0][3])
 
   with col3:
       st.write("")
  
-  st.write(' Student ID : ',Result[0][0])
-  st.write('Name : ',Result[0][1])
-  st.write('Starting Date : ',Result[0][2])
-  st.write('Completed Assignments : ',Result[0][3])
+
   
   if Result[0][3]>14:
         st.write("Statue : Completed")
