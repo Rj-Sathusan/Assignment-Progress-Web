@@ -27,9 +27,9 @@ if(st.button('Submit')):
         st.write('Starting Date : ',Result[0][2])
         st.write('Completed Assignments : ',Result[0][3])
         if Result[0][3]>14:
-          st.write('Congratulations ',Result[0][1],' keep going !')
+          st.write('Congratulations ',(Result[0][1])[2:],' keep going !')
         elif Result[0][3]<14:
-          st.write('Never give up ',(Result[0][1])[1:5],' keep going !')
+          st.write('Never give up ',(Result[0][1])[2:],' keep going !')
         
    
           
