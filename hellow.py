@@ -12,6 +12,8 @@ mydb  = mysql.connector.connect(
 
 name = st.text_input("Enter Your Student ID","") 
 if(st.button('Submit')):
+  from streamlit import caching
+  caching.clear_cache()
   sql = "SELECT * FROM assignment_details WHERE Student_code="+name
   mycursor = mydb.cursor()
   mycursor.execute(sql)
