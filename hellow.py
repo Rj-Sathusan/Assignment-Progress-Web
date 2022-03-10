@@ -44,9 +44,7 @@ if(st.button('Submit')):
                 st.write("Statue : ",(15-Result[0][3])," more assignments pending...")
                 img = Image.open('pngtree-never-give-up-motivation-poster-concept-black-and-white-illustration-png-image_2154318-removebg-preview.png')
                 st.image(img, width=300)
-                st.nav({
-                page1: page2.py,
-                }}
+                st.nav({page1: page2.py}}
                 
 
 
