@@ -19,7 +19,7 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   
   st.write('')
-  col1, col2 = st.columns([1,1])
+  col1, col2 = st.columns([1,0])
 
   with col1:
         st.write(' Student ID : ',Result[0][0])
