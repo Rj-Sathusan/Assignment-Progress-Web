@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import mysql.connector
 img = Image.open("Medal.gif")
-
+st.image(img, width=200)
 
 mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
