@@ -25,10 +25,10 @@ if(st.button('Submit')):
       st.write('ppppp')
 
   with col2:
-  st.image("https://i.imgflip.com/amucx.jpg")
+      st.image("https://i.imgflip.com/amucx.jpg")
 
   with col3:
-  st.write("")
+      st.write("")
   st.markdown("<p style='text-align: center;'>' Student ID : '"+Result[0][0]/p><<br>, unsafe_allow_html=True)
   st.write(' Student ID : ',Result[0][0])
   st.write('Name : ',Result[0][1])
