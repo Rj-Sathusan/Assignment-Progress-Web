@@ -19,7 +19,7 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   
   st.write('')
-  col1, col2 = st.columns([1,6])
+  col1, col2 = st.columns([1,4])
 
   with col1:
         st.write(' Student ID : ',Result[0][0])
@@ -30,7 +30,7 @@ if(st.button('Submit')):
         with col2:
                 st.write("Statue : Completed")
                 img = Image.open("500-5009955_open-circle-with-a-line-through.png")
-                st.image(img, width=500)
+                st.image(img, width=300)
               
   elif Result[0][3]<14:
         with col2:
