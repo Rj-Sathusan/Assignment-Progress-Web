@@ -32,7 +32,6 @@ if(st.button('Submit')):
         with col2:
                 st.write("Statue : Completed")
                 st.image("https://cdn.dribbble.com/users/43762/screenshots/1097917/dribbble_olympics_medal.gif")
-                st.image(img, width=300)
               
   elif Result[0][3]<14:
         with col2:
