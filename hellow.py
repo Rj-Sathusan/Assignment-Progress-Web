@@ -29,15 +29,15 @@ if(st.button('Submit')):
   if Result[0][3]>14:
         with col2:
                 st.write("Statue : Completed")
-                img = Image.open("500-5009955_open-circle-with-a-line-through.png")
+                st.image("https://cdn.dribbble.com/users/43762/screenshots/1097917/dribbble_olympics_medal.gif")
                 st.image(img, width=300)
               
   elif Result[0][3]<14:
         with col2:
-                img = Image.open('pngtree-never-give-up-motivation-poster-concept-black-and-white-illustration-png-image_2154318-removebg-preview.png')
                 st.write("Statue : ",(15-Result[0][3])," more assignments pending...")
-                st.image(img, width=500)
-                st.image("https://cdn.dribbble.com/users/43762/screenshots/1097917/dribbble_olympics_medal.gif")
+                img = Image.open('pngtree-never-give-up-motivation-poster-concept-black-and-white-illustration-png-image_2154318-removebg-preview.png')
+                st.image(img, width=300)
+                
 
 
  
