@@ -5,7 +5,6 @@ st.markdown("<u><h1 style='text-align: center; color: red;'>Assignment Progress 
 st.markdown("<u><h2 style='text-align: center; color: white;'>IDM EASTERN CAMPUES</h2><u><br>", unsafe_allow_html=True)
 
 
-st.image(img, width=500)
 
 mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
