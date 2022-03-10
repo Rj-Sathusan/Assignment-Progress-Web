@@ -19,6 +19,16 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   
   st.write('')
+  col1, col2, col3 = st.beta_columns([1,6,1])
+
+  with col1:
+  st.write("ppppp")
+
+  with col2:
+  st.image("https://i.imgflip.com/amucx.jpg")
+
+  with col3:
+  st.write("")
   st.markdown("<p style='text-align: center;'>' Student ID : '"+Result[0][0]/p><<br>, unsafe_allow_html=True)
   st.write(' Student ID : ',Result[0][0])
   st.write('Name : ',Result[0][1])
