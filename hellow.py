@@ -29,7 +29,7 @@ if(st.button('Submit')):
 
   with col3:
       st.write("")
-  st.markdown("<p style='text-align: center;'>' Student ID : '"+Result[0][0]/p><<br>, unsafe_allow_html=True)
+ 
   st.write(' Student ID : ',Result[0][0])
   st.write('Name : ',Result[0][1])
   st.write('Starting Date : ',Result[0][2])
