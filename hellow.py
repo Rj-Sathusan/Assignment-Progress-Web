@@ -11,7 +11,7 @@ mydb  = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("SELECT * FROM Try")
+mycursor.execute("SELECT * FROM assignment_details")
 
 Result = mycursor.fetchall()
 
