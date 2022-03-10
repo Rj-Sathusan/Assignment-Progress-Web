@@ -22,7 +22,7 @@ if(st.button('Submit')):
   col1, col2, col3 = st.beta_columns([1,6,1])
 
   with col1:
-  st.write('ppppp')
+      st.write('ppppp')
 
   with col2:
   st.image("https://i.imgflip.com/amucx.jpg")
