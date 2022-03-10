@@ -29,19 +29,17 @@ if(st.button('Submit')):
         if Result[0][3]>14:
           st.write('Congratulations ',(Result[0][1])[2:],' keep going !')
         elif Result[0][3]<14:
-          q=('Never give up ',(Result[0][1])[2:],' keep going !')
-          st.success(q)
-        
+          st.write('Never give up ',(Result[0][1])[2:],' keep going !')
    
           
   if Result[0][3]>14:
         with col2:
-                st.write("Statue : Completed")
+                st.success("Statue : Completed")
                 st.image("https://cdn.dribbble.com/users/43762/screenshots/1097917/dribbble_olympics_medal.gif")
                             
   elif Result[0][3]<14:
         with col2:
-                st.write("Statue : ",(15-Result[0][3])," more assignments pending...")
+                st.info("Statue : ",(15-Result[0][3])," more assignments pending...")
                 img = Image.open('pngtree-never-give-up-motivation-poster-concept-black-and-white-illustration-png-image_2154318-removebg-preview.png')
                 st.image(img, width=300)
                 
