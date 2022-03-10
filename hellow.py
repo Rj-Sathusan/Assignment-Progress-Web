@@ -29,7 +29,7 @@ if(st.button('Submit')):
         if Result[0][3]>14:
           st.write('Congratulations ',(Result[0][1])[2:],' keep going !')
         elif Result[0][3]<14:
-          st.write('Never give up ',(Result[0][1])[2:],' keep going !')
+          st.success('Never give up ',(Result[0][1])[2:],' keep going !')
         
    
           
