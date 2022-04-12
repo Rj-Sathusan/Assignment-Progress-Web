@@ -10,8 +10,8 @@ mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
   password=st.secrets["db_pass"], database=st.secrets["db"])
   
-option = st.selectbox('Student','Teacher')
-name = st.text_input("Enter Your ",option," ID","") 
+
+name = st.text_input("Enter Your option ID","") 
 if(st.button('Submit')):
   sql = "SELECT * FROM assignment_details WHERE Student_code="+name
   mycursor = mydb.cursor()
