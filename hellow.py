@@ -12,7 +12,7 @@ mydb  = mysql.connector.connect(
   
 who = st.selectbox("",
                      ['I am a Student', 'I am a Teacher'])
-name = st.text_input("Enter Your ",who," ID","") 
+name = st.text_input("Enter Your "+who+" ID","") 
 if(st.button('Submit')):
   sql = "SELECT * FROM assignment_details WHERE Student_code="+name
   mycursor = mydb.cursor()
