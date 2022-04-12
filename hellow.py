@@ -9,10 +9,12 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
   password=st.secrets["db_pass"], database=st.secrets["db"])
-  
-who = st.selectbox("",
+col1, col2 = st.columns([1,1])
+with col1:
+      who = st.selectbox("",
                      ['I am a Student', 'I am a Teacher'])
-name = st.text_input("Enter Your "+who+" ID","") 
+with col2:
+      name = st.text_input("Enter Your "+who+" ID","") 
 if(st.button('Submit')):
   sql = "SELECT * FROM assignment_details WHERE Student_code="+name
   mycursor = mydb.cursor()
