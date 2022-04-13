@@ -11,6 +11,7 @@ mydb  = mysql.connector.connect(
   password=st.secrets["db_pass"], database=st.secrets["db"])
 col1, col2 = st.columns([1,1])
 agree = st.checkbox('I agree')
+agree=True
 with col1:
       who = st.selectbox("I am a",
                      ['Student', 'Teacher'])
