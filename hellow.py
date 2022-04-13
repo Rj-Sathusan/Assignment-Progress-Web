@@ -12,7 +12,11 @@ mydb  = mysql.connector.connect(
 col1, col2 = st.columns([1,1])
 agree = st.checkbox('I agree',value = True)
 
-
+options = st.multiselect(
+    "What are your favorite colors",
+    ["Green", "Yellow", "Red", "Blue"],
+    default=["Yellow"]
+)
 
 with col1:
       who = st.selectbox("I am a",
