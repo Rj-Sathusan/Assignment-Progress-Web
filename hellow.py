@@ -11,8 +11,8 @@ mydb  = mysql.connector.connect(
   password=st.secrets["db_pass"], database=st.secrets["db"])
 col1, col2 = st.columns([1,1])
 with col1:
-      who = st.selectbox("",
-                     ['I am a Student', 'I am a Teacher'])
+      who = st.selectbox("I am a",
+                     ['Student', 'Teacher'])
 with col2:
       name = st.text_input("Enter Your "+who+" ID","") 
 if(st.button('Submit')):
@@ -22,7 +22,8 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   st.write('')
   
-  
+  agree = st.checkbox('I agree')
+
   col1, col2 = st.columns([1,1])
   
   with col1:
