@@ -12,8 +12,7 @@ mydb  = mysql.connector.connect(
 col1, col2 = st.columns([1,1])
 agree = st.checkbox('I agree',value = True)
 
-hobbies = st.multiselect("Hobbies: ",
-                         ['Dancing', 'Reading', 'Sports'])
+
 
 with col1:
       who = st.selectbox("I am a",
