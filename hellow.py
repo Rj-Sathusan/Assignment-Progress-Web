@@ -3,7 +3,7 @@ from PIL import Image
 import mysql.connector
 
 
-st.markdown("<p style='text-align: center; color: white; size:19>IDM</p><h4 style='text-align: center; color: white;'>EASTERN CAMPUES</h4><u><br>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: white; width:19>IDM</p><h4 style='text-align: center; color: white;'>EASTERN CAMPUES</h4><u><br>", unsafe_allow_html=True)
 st.markdown("<br><br>", unsafe_allow_html=True)
 
 mydb  = mysql.connector.connect(
