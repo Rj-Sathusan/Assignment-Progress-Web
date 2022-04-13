@@ -10,8 +10,7 @@ mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
   password=st.secrets["db_pass"], database=st.secrets["db"])
 col1, col2 = st.columns([1,1])
-agree = st.checkbox('I agree')
-agree=True
+agree = st.checkbox('I agree',value = True)
 with col1:
       who = st.selectbox("I am a",
                      ['Student', 'Teacher'])
