@@ -10,6 +10,7 @@ mydb  = mysql.connector.connect(
   host=st.secrets["db_host"], user=st.secrets["db_user"],
   password=st.secrets["db_pass"], database=st.secrets["db"])
 col1, col2 = st.columns([1,1])
+agree = st.checkbox('I agree')
 with col1:
       who = st.selectbox("I am a",
                      ['Student', 'Teacher'])
@@ -22,7 +23,6 @@ if(st.button('Submit')):
   Result = mycursor.fetchall()
   st.write('')
   
-  agree = st.checkbox('I agree')
 
   col1, col2 = st.columns([1,1])
   
