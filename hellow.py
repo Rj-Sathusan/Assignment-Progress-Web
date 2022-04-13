@@ -14,9 +14,6 @@ agree = st.checkbox('I agree',value = True)
 
 hobbies = st.multiselect("Hobbies: ",
                          ['Dancing', 'Reading', 'Sports'],default=["Sports"])
-hobbies=['Dancing']
-
-hobbies
 
 with col1:
       who = st.selectbox("I am a",
